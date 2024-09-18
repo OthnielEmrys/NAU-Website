@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "new-age-university"
-  }
+    "default": "new-age-university",
+    "staging": "new-age-university"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
