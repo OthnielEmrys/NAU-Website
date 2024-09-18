@@ -1,0 +1,39 @@
+{
+  "id": "python-basics-quiz",
+  "title": "Python Basics Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the correct file extension for Python files?",
+      "options": [
+        ".py",
+        ".pt",
+        ".pyt",
+        ".pyth"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "question": "How do you create a variable named 'x' with the value 5?",
+      "options": [
+        "x = 5",
+        "int x = 5",
+        "var x = 5",
+        "let x = 5"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is used to define a function in Python?",
+      "options": [
+        "function",
+        "def",
+        "define",
+        "func"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

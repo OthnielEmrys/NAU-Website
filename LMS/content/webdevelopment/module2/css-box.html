@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: CSS Box Model</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container my-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">Week 2: CSS Box Model</h1>
+        <p class="lead">Understand how the box model works and how to adjust padding, borders, and margins for precise layout control.</p>
+    </div>
+
+    <!-- CSS Box Model Section -->
+    <section id="css-box-model" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">3. CSS Box Model</h2>
+            <p>The CSS Box Model is a crucial concept in web development. It defines how the size and spacing of every HTML element on a page are calculated, making it important to understand for precise control over layout and design.</p>
+
+            <!-- Understanding the Box Model -->
+            <h3 class="h5 mt-4">3.1. Understanding the Box Model</h3>
+            <p>Every element on a web page is treated as a rectangular box by the browser. The <strong>CSS Box Model</strong> is a structure that defines how elements are displayed and how their total width and height are calculated. The model consists of four key areas:</p>
+
+            <ul>
+                <li><strong>Content:</strong> The actual content of the element, such as text, images, or other media.</li>
+                <li><strong>Padding:</strong> The space between the content and the element’s border.</li>
+                <li><strong>Border:</strong> The boundary line around the padding (optional).</li>
+                <li><strong>Margin:</strong> The space outside the border, separating the element from other elements on the page.</li>
+            </ul>
+
+            <div class="alert alert-info">
+                <p class="mb-0"><strong>Important:</strong> The total width and height of an element are affected by its content width, padding, border, and margin. Understanding how these properties interact helps in creating well-structured layouts.</p>
+            </div>
+
+            <!-- Example of the Box Model -->
+            <h4 class="h6 mt-3">Example: Basic Box Model</h4>
+            <p>In the following example, a <code>div</code> element has a content width of 200px, padding, a border, and margin applied to it:</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+div {
+    width: 200px;         /* Content width */
+    padding: 10px;        /* Space between content and border */
+    border: 2px solid black; /* Border around the padding */
+    margin: 20px;         /* Space outside the border */
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> The <code>div</code> has a content width of 200px, 10px of padding, a 2px solid black border, and 20px of margin. This makes the total element size: <br>
+                <strong>Total Width:</strong> 200px (content) + 10px (left padding) + 10px (right padding) + 2px (left border) + 2px (right border) + 20px (left margin) + 20px (right margin) = 264px</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adjusting the Box Model Section -->
+    <section id="adjusting-box-model" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h3 class="h5 mb-3">3.2. Adjusting the Box Model</h3>
+            <p>CSS provides flexibility to modify the box model's individual components—padding, border, and margin—to achieve the desired layout. Here's how you can adjust each part:</p>
+
+            <!-- Padding -->
+            <h4 class="h6 mt-3">• Padding</h4>
+            <p>The <code>padding</code> property adds space between the content of an element and its border, making the content more readable by creating breathing room around it.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+p {
+    padding: 15px;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> The above CSS adds 15px of padding to all sides of the paragraph (<code>&lt;p&gt;</code>) content. This will make the text appear more spaced out within its container, enhancing readability.</p>
+            </div>
+
+            <!-- Border -->
+            <h4 class="h6 mt-4">• Border</h4>
+            <p>The <code>border</code> property is used to create a line around the element. You can customize the thickness, style (e.g., solid, dashed), and color of the border.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+img {
+    border: 5px solid #ccc;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> This CSS applies a 5px thick solid border with a light gray color (<code>#ccc</code>) around the image (<code>&lt;img&gt;</code>). The border visually frames the image, making it stand out.</p>
+            </div>
+
+            <!-- Margin -->
+            <h4 class="h6 mt-4">• Margin</h4>
+            <p>The <code>margin</code> property creates space around an element, outside its border. You can control margins individually for the top, right, bottom, and left sides of an element.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> The example above adds a 20px margin above the <code>&lt;h1&gt;</code> heading and a 10px margin below it. This spacing separates the heading from other elements, improving readability and layout aesthetics.</p>
+            </div>
+
+            <!-- Margin Shorthand -->
+            <h4 class="h6 mt-4">• Margin Shorthand</h4>
+            <p>CSS also provides a shorthand notation to define all four margins (top, right, bottom, and left) in one line. Here's how:</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+div {
+    margin: 20px 15px 10px 5px; /* Top, Right, Bottom, Left */
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> This shorthand notation sets the top margin to 20px, right margin to 15px, bottom margin to 10px, and left margin to 5px for the <code>div</code> element.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

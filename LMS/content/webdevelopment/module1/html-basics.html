@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics - New Age University</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\styles.css">
+    
+    <!-- Embedding CodeMirror (Code Editor) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/xml/xml.min.js"></script>
+</head>
+<body>
+<div class="container mt-4">
+  <h1 class="display-4 mb-4">HTML Basics</h1>
+  
+  <section id="what-is-html" class="mb-5">
+    <h2 class="h3 mb-3">3.1. What is HTML?</h2>
+    <p class="lead">HTML, or Hypertext Markup Language, is the backbone of any web page. It is used to structure content and define the elements that make up the page, such as headings, paragraphs, links, images, and more.</p>
+    <p><strong>Basic Structure of an HTML Document:</strong></p>
+
+    <!-- Embedding CodeMirror for Interactive HTML Example -->
+    <textarea id="html-editor" name="code">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is my first web page using HTML.</p>
+  </body>
+</html>
+    </textarea>
+
+    <ul>
+      <li><strong>&lt;!DOCTYPE html&gt;:</strong> This declaration defines the document type and version of HTML.</li>
+      <li><strong>&lt;html&gt;:</strong> The root element that wraps all content on the page.</li>
+      <li><strong>&lt;head&gt;:</strong> Contains meta-information about the HTML document (e.g., title, character set).</li>
+      <li><strong>&lt;title&gt;:</strong> Specifies the title of the web page, displayed on the browser tab.</li>
+      <li><strong>&lt;body&gt;:</strong> Contains the content of the web page, including text, images, and links.</li>
+    </ul>
+  </section>
+
+  <section id="essential-html-tags" class="mb-5">
+    <h2 class="h3 mb-3">3.2. Essential HTML Tags</h2>
+    <ul>
+      <li><strong>&lt;h1&gt; to &lt;h6&gt;:</strong> Heading tags, with &lt;h1&gt; being the highest level and &lt;h6&gt; the lowest.</li>
+      <li><strong>&lt;p&gt;:</strong> Paragraph tag for blocks of text.</li>
+      <li><strong>&lt;a&gt;:</strong> Anchor tag for creating hyperlinks.</li>
+      <li><strong>&lt;img&gt;:</strong> Image tag to display pictures.</li>
+      <li><strong>&lt;div&gt; and &lt;span&gt;:</strong> Container tags for grouping elements.</li>
+    </ul>
+
+    <p><strong>Example:</strong></p>
+
+    <!-- Embedding CodeMirror for Another Interactive Example -->
+    <textarea id="html-example-editor" name="code">
+<h2>About Us</h2>
+<p>We are a company dedicated to providing quality services.</p>
+<a href="contact.html">Contact Us</a>
+<img src="company-logo.png" alt="Company Logo">
+    </textarea>
+  </section>
+</div>
+
+<!-- CodeMirror Initialization -->
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("html-editor"), {
+        lineNumbers: true,
+        mode: "xml",
+        theme: "default",
+        readOnly: false
+    });
+
+    var exampleEditor = CodeMirror.fromTextArea(document.getElementById("html-example-editor"), {
+        lineNumbers: true,
+        mode: "xml",
+        theme: "default",
+        readOnly: false
+    });
+</script>
+
+</body>
+
+</html>

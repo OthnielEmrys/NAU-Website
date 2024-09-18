@@ -1,0 +1,22 @@
+/* Add to styles.css */
+@media (max-width: 768px) {
+    #app {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    #main-content {
+        order: 1;
+    }
+
+    #toggle-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+}

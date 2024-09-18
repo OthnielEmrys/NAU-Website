@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Responsive Web Design</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for the examples */
+        .responsive-bg {
+            background-color: lightcoral;
+            padding: 20px;
+            color: white;
+        }
+        .fluid-grid-example {
+            background-color: lightyellow;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .flexible-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container my-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">Week 2: Responsive Web Design</h1>
+        <p class="lead">Learn how to make your web pages responsive, ensuring they look great on any device.</p>
+    </div>
+
+    <!-- Responsive Web Design Section -->
+    <section id="responsive-web-design" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">5. Responsive Web Design</h2>
+            <p>Responsive Web Design (RWD) is an approach to web design aimed at crafting websites that provide an optimal viewing experience across a wide range of devices. This involves using fluid grids, flexible images, and media queries to adapt the layout and content of a web page based on the device's screen size.</p>
+
+            <!-- What is Responsive Web Design? -->
+            <h3 class="h5 mt-4">5.1. What is Responsive Web Design?</h3>
+            <p>Responsive web design ensures that web pages render well on various devices and screen sizes. The goal is to provide a smooth and enjoyable user experience, regardless of whether the visitor is using a smartphone, tablet, or desktop computer.</p>
+
+            <!-- Media Queries -->
+            <h3 class="h5 mt-4">5.2. Media Queries</h3>
+            <p>Media queries are used to apply different styles depending on the device's characteristics, such as its screen width. This allows for a tailored design that adapts to various screen sizes.</p>
+            
+            <!-- Example of Media Query -->
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+    .container {
+        width: 100%;
+    }
+}
+                </pre>
+                <p>This media query sets the background color to light blue and adjusts the container width to 100% when the screen width is 768px or less. You can experiment with different breakpoints to target various device sizes.</p>
+            </div>
+
+            <!-- Fluid Grids -->
+            <h3 class="h5 mt-4">5.3. Fluid Grids</h3>
+            <p>Fluid grids use percentage-based widths rather than fixed pixel values. This allows layout elements to resize proportionally based on the screen size.</p>
+            
+            <!-- Example of Fluid Grid -->
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+.column {
+    width: 50%;
+}
+                </pre>
+                <p class="fluid-grid-example">This column takes up 50% of the available width, adjusting dynamically as the screen size changes. You can use fluid grids to create flexible layouts that adapt to different screen sizes.</p>
+            </div>
+
+            <!-- Flexible Images -->
+            <h3 class="h5 mt-4">Flexible Images</h3>
+            <p>Flexible images scale with the size of their container. This ensures that images do not overflow their containers and maintain their aspect ratio across different devices.</p>
+            
+            <!-- Example of Flexible Image -->
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+img {
+    max-width: 100%;
+    height: auto;
+}
+                </pre>
+                <p>Here’s an example of a flexible image that scales with the width of its container while preserving its aspect ratio.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Sample Image" class="flexible-image">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap JS (Optional for additional functionalities) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

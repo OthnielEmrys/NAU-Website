@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 10;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar.collapsed {
+            width: 0;
+            overflow: hidden;
+        }
+        .main-content {
+            margin-left: 300px;
+            margin-top: 40px;
+            padding: 20px;
+            transition: 0.5s;
+            grid-area: main-content;
+            flex-grow: 1;
+            padding: 50px; /* Adjust for header */
+            background-color: #ffffff;
+            transition: margin-left 0.3s ease;
+            overflow-y: auto;
+            flex: 1s;
+            margin-top: 20px; /* Adjust for header */
+        }
+        .main-content.full-width {
+            margin-left: 0;
+        }
+        #toggle-btn {
+            position: fixed;
+            left: 310px;
+            top: 10px;
+            z-index: 1000;
+            transition: 0.5s;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            top: 60px;
+            left: 15px;
+            z-index: 1000;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            transition: left 0.3s ease;
+        }
+        .sidebar.collapsed + #toggle-btn {
+            left: 10px;
+        }
+        .module-title {
+            cursor: pointer;
+        }
+        .topic-list {
+            display: none;
+        }
+        .module-item.active .topic-list {
+            display: block;
+        }    
+
+    
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">New Age University</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('courses')">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('contact')">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <button id="toggle-btn" class="btn btn-primary">☰</button>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="text-center">Course Modules</h2>
+        </div>
+        <ul class="module-list">
+            <li class="module-item">
+                <div class="module-title" data-module="Introduction">Introduction</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="Introduction" data-topic="topic1-1">Topic 1.1: Overview</li>
+                    <li class="topic-item" data-module="Introduction" data-topic="topic1-2">Topic 1.2: Getting Started</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module1">Module 1: Basics</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module1" data-topic="topic1-1">Topic 1.1: HTML & CSS</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-2">Topic 1.2: JavaScript Basics</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-1">Topic 1.1: HTML & CSS</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-2">Topic 1.2: JavaScript Basics</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-1">Topic 1.1: HTML & CSS</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-2">Topic 1.2: JavaScript Basics</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module2">Module 2: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module3">Module 3: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module3" data-topic="topic3-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-1">Topic 2.1: Deep Dive</li>                    <li class="topic-item" data-module="module3" data-topic="topic2-2">Topic 2.2: Case Studies</li>                    <li class="topic-item" data-module="module3" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module4">Module 4: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module4" data-topic="topic4-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module5">Module 5: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module5" data-topic="topic5-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module6">Module 6: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module7">Module 7: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module7" data-topic="topic7-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module8">Module 8: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module8" data-topic="topic8-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module8" data-topic="topic8-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module8" data-topic="topic8-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="Resources">Resources</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="additional resources" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <!-- Additional modules can be added here -->
+        </ul>
+    </div>
+        </ul>
+        
+
+
+
+    <div class="main-content" id="main-content">
+        <h2>Welcome to the Course</h2>
+        <p>Select a module from the sidebar to start learning.</p>
+    </div>
+   <div>
+        <footer>
+            <p>© 2024 New Age University. All rights reserved.</p>
+        </footer>    
+    </div>
+    <script src="js\bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="course-data.js"></script>
+    <script src="main-js.js"></script>
+</body>
+</html>

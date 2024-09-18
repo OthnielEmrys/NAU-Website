@@ -1,0 +1,431 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAU Course Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css" id="dcoder_stylesheet">
+
+    /* Header Styling */
+    header {
+        background-color: #091929;
+        color: #fff;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 1em;
+    }
+    
+    header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Web Development Course</h1>
+                <div class="logo">
+                    <h1>New Age University</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+    </header>
+
+    <!-- Button to toggle the visibility of the sidebar -->
+    <button id="toggle-btn">☰</button>
+
+    <!-- Sidebar containing course modules and topics -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Course Modules</h2>
+        </div>
+        <ul class="module-list">
+            <li class="module-item">
+                <div class="module-title" data-module="Introduction">Introduction</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="Introduction" data-topic="topic1-1">Topic 1.1: Overview</li>
+                    <li class="topic-item" data-module="Introduction" data-topic="topic1-2">Topic 1.2: Getting Started</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module1">Module 1: Basics</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module1" data-topic="topic1-1">Topic 1.1: HTML & CSS</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-2">Topic 1.2: JavaScript Basics</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-1">Topic 1.1: HTML & CSS</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-2">Topic 1.2: JavaScript Basics</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-1">Topic 1.1: HTML & CSS</li>
+                    <li class="topic-item" data-module="module1" data-topic="topic1-2">Topic 1.2: JavaScript Basics</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module2">Module 2: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module2" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module3">Module 3: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module3" data-topic="topic3-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-1">Topic 2.1: Deep Dive</li>                    <li class="topic-item" data-module="module3" data-topic="topic2-2">Topic 2.2: Case Studies</li>                    <li class="topic-item" data-module="module3" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module3" data-topic="topic3-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module4">Module 4: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module4" data-topic="topic4-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module4" data-topic="topic4-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module5">Module 5: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module5" data-topic="topic5-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module5" data-topic="topic5-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module6">Module 6: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module6" data-topic="topic6-2">Topic 2.2: Case Studies</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module7">Module 7: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module7" data-topic="topic7-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module7" data-topic="topic7-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="module8">Module 8: Advanced Concepts</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="module8" data-topic="topic8-1">Topic 2.1: Deep Dive</li>
+                    <li class="topic-item" data-module="module8" data-topic="topic8-2">Topic 2.2: Case Studies</li>
+                    <li class="topic-item" data-module="module8" data-topic="topic8-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <li class="module-item">
+                <div class="module-title" data-module="Resources">Resources</div>
+                <ul class="topic-list">
+                    <li class="topic-item" data-module="additional resources" data-topic="topic2-1">Topic 2.1: Deep Dive</li>
+                </ul>
+            </li>
+            <!-- Additional modules can be added here -->
+        </ul>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content" id="main-content">
+        <h2>Welcome to the Course</h2>
+        <p>Select a module from the sidebar to start learning.</p>
+    </div>
+<footer>
+    <p>© 2024 New Age University. All rights reserved.</p>
+</footer>
+   
+    <!-- JavaScript to manage the sidebar and content loading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('toggle-btn');
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('main-content');
+
+    // Sidebar toggle
+    toggleBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('full-width');
+        toggleBtn.style.left = sidebar.classList.contains('collapsed') ? '10px' : '310px';
+    });
+
+    // Load the last selected module and topic on page load (if available)
+    const lastModule = localStorage.getItem('lastModule');
+    const lastTopic = localStorage.getItem('lastTopic');
+    if (lastModule && lastTopic) {
+        loadContent(lastModule, lastTopic);
+    }
+
+    // Toggle subcategories (topics) inside modules
+    document.querySelectorAll('.module-title').forEach(moduleTitle => {
+        moduleTitle.addEventListener('click', function () {
+            const parentModule = this.parentElement;
+            const topicsList = parentModule.querySelector('.topics-list');
+
+            if (topicsList) {
+                // Toggle the visibility of the topics list
+                topicsList.classList.toggle('hidden');
+            }
+
+            // Optional: toggle active class for the parent module
+            parentModule.classList.toggle('active');
+        });
+    });
+
+    // Load content when a topic is clicked
+    document.querySelectorAll('.topic-item').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent link default behavior
+            const module = this.getAttribute('data-module');
+            const topic = this.getAttribute('data-topic');
+            loadContent(module, topic); // Load the selected content
+        });
+    });
+
+    // Function to load content dynamically
+    function loadContent(module, topic) {
+        const filePath = `content/${module}/${topic}.html`;  // Build file path
+
+        // Store selected module and topic in localStorage
+        localStorage.setItem('lastModule', module);
+        localStorage.setItem('lastTopic', topic);
+
+        // Fetch and load external HTML content
+        fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load content');
+                }
+                return response.text();
+            })
+            .then(data => {
+                mainContent.innerHTML = data; // Inject content into main section
+            })
+            .catch(error => {
+                mainContent.innerHTML = `
+                    <h2>Error Loading Content</h2>
+                    <p>We encountered an issue loading the content. Please try again later.</p>
+                `;
+                console.error('Error:', error);
+            });
+    }
+});
+
+    </script>
+</body>
+</html>
+
+<script src="script.js"></script>
+
+
+
+<style id="dcoder_stylesheet">body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: flex;
+height: 100%;
+margin: 0;
+background-color: #f7f7f7;
+transition: margin-left 0.3s ease;
+
+/*Grid Layout for the container */
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto; /*Header, Content, Footer*/
+    grid-template-columns: 250px 1fr; /*Sidebar, MainContent*/
+    grid-template-areas: 
+        "header header"
+        "sidebar main-content"
+        "footer footer";
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    transition: margin-left 0.3s ease;
+}
+
+#toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    z-index: 1000;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    transition: left 0.3s ease;
+}
+
+header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.sidebar {
+    grid-area: main-content;
+    width: 300px;
+    min-width: 300px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+    padding-bottom: 100px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    margin-top: 80px; /* Adjust for header */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.module-list, .topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.module-item {
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.module-title {
+    font-weight: bold;
+    font-size: 14px; /* Reduced font size to fit better */
+}
+
+.module-item:hover {
+    background-color: #333;
+}
+
+.topic-item {
+    padding: 5px 30px;
+    font-size: 12px; /* Reduced font size to fit better */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.topic-item:hover {
+    background-color: #444;
+}
+
+.main-content {
+    grid-area: main-content;
+    flex-grow: 1;
+    padding: 50px; /* Adjust for header */
+    background-color: #ffffff;
+    transition: margin-left 0.3s ease;
+    overflow-y: auto;
+    flex: 1s;
+    margin-top: 20px; /* Adjust for header */
+}
+
+.sidebar.collapsed {
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+}
+
+#main-content.full-width {
+    margin-left: 0;
+}
+
+.sidebar.collapsed + #toggle-btn {
+    left: 10px;
+}
+
+.topic-list {
+    display: none;
+}
+
+.module-item.active .topic-list {
+    display: block;
+}
+}
+/* Footer Styling */
+footer {
+    grid-area: footer;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: -20;
+    width: 100%;
+    clear: both;
+
+
+}
+</style>

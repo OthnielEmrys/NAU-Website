@@ -1,0 +1,39 @@
+{
+  "id": "html-basics-quiz",
+  "title": "HTML Basics Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Tech Modern Language",
+        "Hyper Transfer Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "question": "Which tag is used to create a hyperlink?",
+      "options": [
+        "<link>",
+        "<a>",
+        "<hlink>",
+        "<url>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 3,
+      "question": "Which HTML element is used to define the structure of an HTML document?",
+      "options": [
+        "<body>",
+        "<head>",
+        "<html>",
+        "<structure>"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for the profile page */
+        .profile-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .profile-header {
+            width: 100%;
+            background: linear-gradient(to right, #333, #555);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .profile-header .bio {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .profile-content {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-content .section 
+        .profile-content .activities {
+            margin-bottom: 20px;
+        }
+
+        .profile-content .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-content .section p 
+        .profile-content .activities p {
+            font-size: 16px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .profile-content .courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .profile-content .courses .course-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: calc(50% - 15px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-content .activities ul {
+            list-style: none;
+            padding: 0;
+        }
+        .profile-content .courses .course-card h3 {
+            margin-top: 0;
+        }
+        
+        .profile-content .activities ul li {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .profile-content .courses .course-card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .profile-content .courses .course-card a:hover {
+            text-decoration: underline;
+        }
+        .edit-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .edit-button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NAU</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-header">
+            <img src="profile-pic.jpg" alt="Profile Picture">
+            <h1>John Doe</h1>
+            <p class="bio">Aspiring Data Scientist and Enthusiast of Machine Learning. Currently exploring AI for business applications.</p>
+        </div>
+
+        <div class="profile-content">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec risus vel felis laoreet bibendum. Vivamus ultricies, odio et cursus egestas, arcu elit fermentum mi, ut vulputate lacus ligula ut libero.</p>
+            </div>
+
+            <div class="section">
+                <h2>My Courses</h2>
+                <div class="courses">
+                    <div class="course-card">
+                        <h3>Data Analysis and Business Intelligence</h3>
+                        <p>Course description or progress details.</p>
+                        <a href="course-1.html">View Course</a>
+                    </div>
+                    <div class="course-card">
+                        <h3>Web Development</h3>
+                        <p>Course description or progress details.</p>
+                        <a href="course-2.html">View Course</a>
+                    </div>
+                    <!-- Add more course cards as needed -->
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Recent Activities</h2>
+                <p>Details about recent activities, achievements, or milestones.</p>
+            <ul>
+                <li>Completed Module 4 of Data Analysis</li>
+                <li>Participated in Web Dev Workshop</li>
+                <li>Submitted Project for Python Programming</li>
+            </ul>
+            </div>
+            <a href="edit-profile.html" class="edit-button">Edit Profile</a>
+        </div>
+    </main>
+        
+    </div>
+    <footer>
+        <p>© 2024 New Age University. All rights reserved.</p>
+    </footer>
+
+
+
+<style id="dcoder_stylesheet">/* Global Styles for Sign-Up Page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+</style><script id="dcoder_script">// script.js
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    
+    if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+        sidebar.style.width = '250px';
+        toggleBtn.innerHTML = '&#9664;'; // Left arrow
+    } else {
+        sidebar.style.width = '0';
+        toggleBtn.innerHTML = '&#9654;'; // Right arrow
+    }
+}
+</script></body></html>

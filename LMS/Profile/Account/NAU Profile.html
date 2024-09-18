@@ -1,0 +1,212 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for the profile page */
+        .profile-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: linear-gradient(to right, #000, #333);
+            color: #fff;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .profile-header p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .profile-content {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-top: -60px; /* Overlap the header slightly */
+        }
+
+        .profile-content h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .profile-content .info, 
+        .profile-content .courses,
+        .profile-content .activities {
+            margin-bottom: 20px;
+        }
+
+        .profile-content .info p,
+        .profile-content .courses p,
+        .profile-content .activities p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .profile-content .courses ul,
+        .profile-content .activities ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-content .courses ul li,
+        .profile-content .activities ul li {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .edit-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .edit-button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NAU</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-header">
+            <img src="profile-pic.jpg" alt="Profile Picture">
+            <h1>John Doe</h1>
+            <p>Student at New Age University</p>
+        </div>
+
+        <div class="profile-content">
+            <div class="info">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ligula id metus facilisis vehicula.</p>
+            </div>
+
+            <div class="courses">
+                <h2>Enrolled Courses</h2>
+                <ul>
+                    <li>Data Analysis and Business Intelligence</li>
+                    <li>Web Development</li>
+                    <li>Python Programming</li>
+                    <li>AI for Business</li>
+                    <li>UI and UX</li>
+                </ul>
+            </div>
+
+            <div class="activities">
+                <h2>Recent Activities</h2>
+                <ul>
+                    <li>Completed Module 4 of Data Analysis</li>
+                    <li>Participated in Web Dev Workshop</li>
+                    <li>Submitted Project for Python Programming</li>
+                </ul>
+            </div>
+
+            <a href="edit-profile.html" class="edit-button">Edit Profile</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 New Age University. All rights reserved.</p>
+    </footer>
+
+
+<style id="dcoder_stylesheet">/* Global Styles for Sign-Up Page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+</style><script id="dcoder_script">// script.js
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    
+    if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+        sidebar.style.width = '250px';
+        toggleBtn.innerHTML = '&#9664;'; // Left arrow
+    } else {
+        sidebar.style.width = '0';
+        toggleBtn.innerHTML = '&#9654;'; // Right arrow
+    }
+}
+</script></body></html>

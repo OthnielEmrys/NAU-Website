@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Age University - AI Course</title>
+    <link rel="stylesheet" href="styles.css">
+<style type="text/css" id="dcoder_stylesheet">/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #004f9f;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    padding-right: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 1em;
+}
+
+.accordion-item {
+    margin-bottom: 1em;
+}
+
+.accordion-toggle {
+    background-color: #e1e1e1;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.accordion-content {
+    list-style-type: none;
+    padding-left: 1em;
+    display: none;
+    background-color: #f7f7f7;
+    border-left: 3px solid #004f9f;
+}
+
+.accordion-content li {
+    margin: 5px 0;
+}
+
+.accordion-content li a {
+    color: #004f9f;
+    text-decoration: none;
+}
+
+.accordion-content li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.content {
+    width: 75%;
+}
+
+.tasks ul {
+    list-style-type: none;
+}
+
+.tasks li {
+    margin: 10px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #004f9f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}</style></head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>New Age University</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Curriculum</h2>
+            <ul class="accordion">
+                <li class="accordion-item">
+                    <button class="accordion-toggle">Week 1: Introduction to AI</button>
+                    <ul class="accordion-content">
+                        <li><a href="#">I Am Not Technical — How Can I Understand and Use AI?</a></li>
+                        <li><a href="#">Overview: Introduction to AI</a></li>
+                        <li><a href="#">The World of AI</a></li>
+                        <li><a href="#">What You Need to Know About AI</a></li>
+                        <li><a href="#">What is AI?</a></li>
+                        <li><a href="#">AI For Good</a></li>
+                        <li><a href="#">Behind The Scene of an AI Model</a></li>
+                        <li><a href="#">Must-know AI Buzzwords</a></li>
+                    </ul>
+                </li>
+                <li class="accordion-item">
+                    <button class="accordion-toggle">Week 2: Unlock AI Powers with Prompting</button>
+                    <ul class="accordion-content">
+                        <!-- Add modules for Week 2 -->
+                    </ul>
+                </li>
+                <!-- Add more weeks/modules as needed -->
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>Milestone 1: The battle of the LLMs</h2>
+            <p>Jump into the exciting world of AI and creativity in this hands-on module...</p>
+            <div class="tasks">
+                <h3>Tasks</h3>
+                <ul>
+                    <li>Generating Lyrics</li>
+                    <li>The battle of the LLMs</li>
+                    <li>From Lyrics to Music!</li>
+                    <li>Final Submission</li>
+                </ul>
+                <form>
+                    <label for="submission-url">Add URLs here:</label>
+                    <input type="url" id="submission-url" name="submission-url" placeholder="https://example.com/your-submission">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 New Age University. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+<script type="text/javascript" id="dcoder_script">// Script to handle accordion toggles
+document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('.accordion-toggle');
+    
+    accordions.forEach(button => {
+        button.addEventListener('click', function () {
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+});</script></body></html>

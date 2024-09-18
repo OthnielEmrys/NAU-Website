@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Introduction to CSS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container my-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">Week 2: Introduction to CSS</h1>
+        <p class="lead">Learn how to style web pages using CSS, including selectors, properties, and values.</p>
+    </div>
+
+    <!-- Introduction to CSS Section -->
+    <section id="introduction-css" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">1. Introduction to CSS</h2>
+            <p>CSS (Cascading Style Sheets) is a powerful tool that allows you to control the presentation of web pages. While HTML structures the content, CSS is used to style that content, enabling you to control colors, fonts, layouts, spacing, and more.</p>
+
+            <!-- Key Concepts -->
+            <h3 class="h5">Key Concepts</h3>
+            <ul>
+                <li><strong>Selectors:</strong> Used to target specific HTML elements.</li>
+                <li><strong>Properties:</strong> Define what aspect of the element you want to style (e.g., color, margin).</li>
+                <li><strong>Values:</strong> Assign specific settings to the properties.</li>
+            </ul>
+
+            <!-- Example: Basic CSS -->
+            <div class="card mt-4 p-3 bg-light">
+                <h3 class="h5">Example:</h3>
+                <pre class="bg-dark text-white p-3">
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> In this example, <code>h1</code> is the selector, <code>color</code> and <code>font-size</code> are properties, and <code>blue</code> and <code>24px</code> are the corresponding values.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of CSS Selectors Section -->
+    <section id="css-selectors" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">1.2. Types of CSS Selectors</h2>
+
+            <!-- Element Selector -->
+            <h3 class="h5">1.2.1. Element Selector</h3>
+            <p>Targets all instances of a specific HTML element.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+p {
+    color: green;
+}
+                </pre>
+                <p class="mb-0">This targets all <code>p</code> elements and applies the color green.</p>
+            </div>
+
+            <!-- Class Selector -->
+            <h3 class="h5 mt-4">1.2.2. Class Selector</h3>
+            <p>Targets elements with a specific class attribute.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+.highlight {
+    background-color: yellow;
+}
+                </pre>
+                <p class="mb-0">Applied in HTML: <code>&lt;p class="highlight"&gt;This text has a yellow background.&lt;/p&gt;</code></p>
+            </div>
+
+            <!-- ID Selector -->
+            <h3 class="h5 mt-4">1.2.3. ID Selector</h3>
+            <p>Targets a specific element with a unique ID attribute.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+#header {
+    font-size: 20px;
+}
+                </pre>
+                <p class="mb-0">Applied in HTML: <code>&lt;div id="header"&gt;This is the header.&lt;/div&gt;</code></p>
+            </div>
+
+            <!-- Attribute Selector -->
+            <h3 class="h5 mt-4">1.2.4. Attribute Selector</h3>
+            <p>Targets elements with a specific attribute.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+input[type="text"] {
+    border: 1px solid #ccc;
+}
+                </pre>
+                <p class="mb-0">This targets all <code>&lt;input&gt;</code> elements of type "text" and applies the border style.</p>
+            </div>
+
+            <!-- Group Selector -->
+            <h3 class="h5 mt-4">1.2.5. Group Selector</h3>
+            <p>Targets multiple elements and applies the same style.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+h1, h2, h3 {
+    color: red;
+}
+                </pre>
+                <p class="mb-0">This applies the color red to all <code>h1</code>, <code>h2</code>, and <code>h3</code> elements.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

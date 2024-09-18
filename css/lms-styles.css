@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#main-content {
+    flex: 1;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#main-content.full-width {
+    margin-left: 0;
+}
+
+/* Add more styles as needed */

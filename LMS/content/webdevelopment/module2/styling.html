@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Styling Text and Fonts</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container my-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">Week 2: Styling Text and Fonts</h1>
+        <p class="lead">Learn how to control text appearance using CSS properties such as font family, size, weight, and alignment.</p>
+    </div>
+
+    <!-- Styling Text and Fonts Section -->
+    <section id="styling-text" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">2. Styling Text and Fonts</h2>
+            <p>CSS provides numerous properties that allow you to manipulate and style text on web pages, including font choices, size, alignment, and spacing. Understanding these properties is essential for creating visually appealing websites.</p>
+
+            <!-- Text Properties -->
+            <h3 class="h5 mt-4">2.1. Text Properties</h3>
+            <p>CSS allows for extensive control over the appearance of text. The key properties to manipulate text include:</p>
+
+            <!-- Font Family -->
+            <h4 class="h6 mt-3">• Font Family</h4>
+            <p>The <code>font-family</code> property specifies the font used for text. You can define multiple fonts in a list as a fallback in case the first font isn't available on the user's device.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+body {
+    font-family: 'Arial', sans-serif;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> The above example sets the font for the entire <code>body</code> to Arial, with <code>sans-serif</code> as the fallback font if Arial is unavailable.</p>
+            </div>
+
+            <!-- Font Size -->
+            <h4 class="h6 mt-4">• Font Size</h4>
+            <p>The <code>font-size</code> property determines the size of the text. You can use various units such as pixels (px), ems, or rems to set the size.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+p {
+    font-size: 16px;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> This code sets the font size for all paragraph elements (<code>&lt;p&gt;</code>) to 16 pixels, which is a common default size for body text.</p>
+            </div>
+
+            <!-- Font Weight -->
+            <h4 class="h6 mt-4">• Font Weight</h4>
+            <p>The <code>font-weight</code> property controls the thickness or boldness of the text. Values can range from normal to bold, or you can specify numeric values like 400 (normal) or 700 (bold).</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+h1 {
+    font-weight: bold;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> The example above sets the font weight of <code>&lt;h1&gt;</code> elements to bold, making the text thicker and more prominent.</p>
+            </div>
+
+            <!-- Text Alignment -->
+            <h4 class="h6 mt-4">• Text Alignment</h4>
+            <p>The <code>text-align</code> property is used to align text horizontally within its container. Common values include <code>left</code>, <code>right</code>, <code>center</code>, and <code>justify</code>.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+.centered-text {
+    text-align: center;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> This CSS class centers the text within the container, often used for headings or important text elements.</p>
+            </div>
+
+            <!-- Line Height -->
+            <h4 class="h6 mt-4">• Line Height</h4>
+            <p>The <code>line-height</code> property sets the vertical spacing between lines of text. A larger value increases the space between lines, improving readability.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+p {
+    line-height: 1.6;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> The example above sets the line height for all paragraph elements to 1.6 times the font size, adding extra spacing between lines of text.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Using Web Fonts Section -->
+    <section id="using-web-fonts" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">2.2. Using Web Fonts</h2>
+            <p>Web fonts are a great way to enhance the design of a website. Instead of relying solely on system fonts, you can use custom fonts by importing them from online sources like Google Fonts or Adobe Fonts.</p>
+
+            <!-- Example: Importing Web Fonts -->
+            <h3 class="h5">Example: Importing Google Fonts</h3>
+            <p>Here's how to import and use the "Roboto" font from Google Fonts:</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+                </pre>
+                <p class="mb-0"><strong>Explanation:</strong> This code imports the "Roboto" font from Google Fonts and applies it to the entire page by setting it as the <code>font-family</code> for the <code>body</code> element. The import URL specifies the font weights (400 for normal and 700 for bold) and ensures the font displays properly on all devices.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

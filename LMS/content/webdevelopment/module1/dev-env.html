@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up a Development Environment - New Age University</title>
+    
+    <!-- Embedding CodeMirror for Code Editing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/xml/xml.min.js"></script>
+</head>
+
+<body>
+<div class="container mt-4">
+  <h1 class="display-4 mb-4">Setting Up a Development Environment</h1>
+
+  <section id="choosing-code-editor" class="mb-5">
+    <h2 class="h3 mb-3">4.1. Choosing a Code Editor</h2>
+    <p>A code editor is a specialized text editor designed for writing and editing code. Some popular choices include:</p>
+    <ul>
+      <li><strong>Visual Studio Code (VS Code):</strong> A free, open-source code editor with a rich ecosystem of extensions.</li>
+      <li><strong>Sublime Text:</strong> A fast, lightweight editor with powerful features.</li>
+      <li><strong>Atom:</strong> A free, open-source editor developed by GitHub.</li>
+    </ul>
+
+    <h4>Example: Installing Visual Studio Code</h4>
+    <ol>
+      <li>Visit the <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code website</a>.</li>
+      <li>Download the version appropriate for your operating system.</li>
+      <li>Install the software following the on-screen instructions.</li>
+    </ol>
+  </section>
+
+  <section id="setting-up-project" class="mb-5">
+    <h2 class="h3 mb-3">4.2. Setting Up Your First Project</h2>
+    <ol>
+      <li><strong>Create a Project Folder:</strong> Organize your project files in a dedicated folder.</li>
+      <li><strong>Create an HTML File:</strong> Open your code editor and create a new file named <code>index.html</code>.</li>
+      <li><strong>Basic HTML Structure:</strong> Write the basic HTML structure in <code>index.html</code>.</li>
+      <li><strong>Open in Browser:</strong> Save the file and open it in your web browser to see the results.</li>
+    </ol>
+
+    <h4>Example:</h4>
+    <!-- Embedding CodeMirror for Interactive HTML Example -->
+    <textarea id="html-project-editor" name="code">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Project</title>
+  </head>
+  <body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple web page created during Week 1.</p>
+  </body>
+</html>
+    </textarea>
+
+    <p>After saving the file, open it in a browser by double-clicking or using the "Open With" feature to see the result.</p>
+  </section>
+</div>
+
+<!-- CodeMirror Initialization -->
+<script>
+    var projectEditor = CodeMirror.fromTextArea(document.getElementById("html-project-editor"), {
+        lineNumbers: true,
+        mode: "xml",
+        theme: "default",
+        readOnly: false
+    });
+</script>
+
+</body>
+
+</html>

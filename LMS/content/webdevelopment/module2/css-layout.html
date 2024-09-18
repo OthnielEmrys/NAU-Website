@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: CSS Layout Techniques</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for the examples */
+        .block-example {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .inline-example {
+            background-color: lightgreen;
+            padding: 5px;
+            margin: 2px;
+        }
+        .inline-block-example {
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+        }
+        .position-example {
+            width: 150px;
+            height: 100px;
+            background-color: lightyellow;
+            margin-bottom: 10px;
+        }
+        .absolute-example {
+            background-color: lightpink;
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container my-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">Week 2: CSS Layout Techniques</h1>
+        <p class="lead">Explore how to control element layout with CSS, including the display property and positioning methods.</p>
+    </div>
+
+    <!-- CSS Layout Techniques Section -->
+    <section id="css-layout-techniques" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">4. CSS Layout Techniques</h2>
+            <p>CSS provides various techniques for controlling the layout and positioning of elements on a web page. Mastering these techniques is crucial for creating responsive and visually appealing web designs.</p>
+
+            <!-- Display Property -->
+            <h3 class="h5 mt-4">4.1. Display Property</h3>
+            <p>The <strong>display</strong> property defines how an element is displayed on the web page. There are several common values for the display property:</p>
+
+            <ul>
+                <li><strong>Block:</strong> The element takes up the full width available and starts on a new line. Examples include <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;h1&gt;</code>.</li>
+                <li><strong>Inline:</strong> The element only takes up as much width as necessary, and it flows within the content. Examples include <code>&lt;span&gt;</code> and <code>&lt;a&gt;</code>.</li>
+                <li><strong>Inline-Block:</strong> Similar to inline, but the element can have width and height applied, while still flowing inline.</li>
+            </ul>
+
+            <!-- Block Example -->
+            <h4 class="h6 mt-4">• Block</h4>
+            <p>In this example, the <code>div</code> elements are displayed as block elements, meaning they take up the full width of their container and appear one after the other vertically.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+div {
+    display: block;
+}
+                </pre>
+                <div class="block-example">Block Element 1</div>
+                <div class="block-example">Block Element 2</div>
+                <div class="block-example">Block Element 3</div>
+            </div>
+
+            <!-- Inline Example -->
+            <h4 class="h6 mt-4">• Inline</h4>
+            <p>Inline elements, such as <code>&lt;span&gt;</code>, only take up as much space as their content requires. They flow inline with other elements, meaning they can be placed side by side in the same line.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+span {
+    display: inline;
+}
+                </pre>
+                <p><span class="inline-example">Inline 1</span><span class="inline-example">Inline 2</span><span class="inline-example">Inline 3</span></p>
+            </div>
+
+            <!-- Inline-Block Example -->
+            <h4 class="h6 mt-4">• Inline-Block</h4>
+            <p>The <code>inline-block</code> display type combines aspects of both block and inline elements. The element behaves like an inline element, allowing it to sit next to other elements on the same line, but it also accepts width and height properties like a block element.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+img {
+    display: inline-block;
+}
+                </pre>
+                <p><img src="https://via.placeholder.com/100" alt="Image 1" class="inline-block-example">
+                   <img src="https://via.placeholder.com/100" alt="Image 2" class="inline-block-example">
+                   <img src="https://via.placeholder.com/100" alt="Image 3" class="inline-block-example">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Positioning Elements Section -->
+    <section id="positioning-elements" class="mb-5">
+        <div class="card p-4 shadow-sm">
+            <h3 class="h5 mb-3">4.2. Positioning Elements</h3>
+            <p>CSS provides different methods for positioning elements on the web page. By manipulating the <strong>position</strong> property, you can control how elements are placed in relation to their normal position or the page as a whole.</p>
+
+            <ul>
+                <li><strong>Static:</strong> The default position. Elements are positioned according to the normal flow of the document.</li>
+                <li><strong>Relative:</strong> The element is positioned relative to its normal position, allowing it to be moved without affecting other elements.</li>
+                <li><strong>Absolute:</strong> The element is positioned relative to its closest positioned ancestor or the document if none exists.</li>
+                <li><strong>Fixed:</strong> The element is positioned relative to the browser window and remains fixed in place when scrolling.</li>
+            </ul>
+
+            <!-- Static Position -->
+            <h4 class="h6 mt-4">• Static</h4>
+            <p>The <code>static</code> position is the default position of all HTML elements. They appear in the normal flow of the document without any special positioning.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+p {
+    position: static;
+}
+                </pre>
+                <p class="position-example">This element is in its default static position.</p>
+            </div>
+
+            <!-- Relative Position -->
+            <h4 class="h6 mt-4">• Relative</h4>
+            <p>Elements with <code>position: relative</code> are positioned relative to their original static position. You can offset their position using the <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+.relative {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+                </pre>
+                <p class="position-example relative">This element is positioned 10px down and 20px to the right from its original position.</p>
+            </div>
+
+            <!-- Absolute Position -->
+            <h4 class="h6 mt-4">• Absolute</h4>
+            <p>An element with <code>position: absolute</code> is removed from the normal document flow and is positioned relative to its nearest positioned ancestor (i.e., an ancestor with a position other than static). If no such ancestor exists, the element is positioned relative to the <code>&lt;html&gt;</code> document.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+                </pre>
+                <div class="position-relative">
+                    <div class="absolute-example absolute">This element is positioned 50px from the top and 100px from the left.</div>
+                </div>
+            </div>
+
+            <!-- Fixed Position -->
+            <h4 class="h6 mt-4">• Fixed</h4>
+            <p>With <code>position: fixed</code>, the element is positioned relative to the browser window, meaning it stays in the same place even when the user scrolls the page.</p>
+            <div class="card bg-light p-3">
+                <pre class="bg-dark text-white p-3">
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+                </pre>
+                <p class="fixed bg-warning p
