@@ -3,87 +3,450 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Age University - A New Way of Learning</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Standard Favicon for Browsers -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+<!-- For Apple devices (iOS, macOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- For Android devices and PWA -->
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+
+<!-- Optional SVG for Scalable Icons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+    .courses-hero-section {
+        position: bottom;
+        height: 86vh;
+        background: url('/Assets/Images/courses.jpg') no-repeat center center;
+        background-size: cover;
+        background-color: #838383; /* Fallback color */
+        overflow: hidden;
+        text-shadow:#f9f9f9
+    }
+    .course-container {
+    display: flex;
+    align-items: stretch; /* Makes the image and text stretch to the same height */
+    gap: 20px; /* space between the image and the text */
+}
+
+.course-item {
+    background-color: #f9f9f9;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+.course-image {
+    width: 35%; /* Image will take up 35% of the container width */
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.hero-content1{
+    font-weight: 200px;
+}
+
+.course-content {
+    flex: 1; /* allows the content to take up the remaining 65% of the space */
+    padding: 20px; /* Adds padding inside the content area */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.course-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #01060c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a5b5c;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .course-container {
+        flex-direction: column; /* Stack the image and content vertically */
+    }
+
+    .course-image {
+        width: 100%;
+        height: 200px; /* Adjust height for mobile */
+    }
+
+    .course-image img {
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .course-content {
+        padding: 15px;
+    }
+
+    .course-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .course-content p {
+        font-size: 0.95rem;
+    }
+}
+
+</style>
+ 
 </head>
 <body>
     <div id="header"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <p>Welcome to New Age University, where innovation meets education, we are commited to providing you with the tools, knowledge and support you need to suceed in an ever-evolving global landscape. Whether you're herer to build ne skills, advance your career, or explore new oppurtunities, you've come to the right place. </p>
-            <p>Join our cutting-edge courses designed for the next generation of leaders and innovators.</p>
-            <a href="#courses" class="btn-primary">Explore Courses</a>
+    <section id="home" class="courses-hero-section">
+        <div class="container"> 
+           <div class="hero-content1"> <h1><strong>Our Courses</strong></h1>
+            <h4> <strong>Our wide range of courses are tailored to help you thrive in the digital age. From foundational skills to advance programs, each course is designed to provide you with knowledge and hands-on experience needed to excel in your chosen field.</strong></h4>
+        </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Courses Section 
     <section id="about" class="about-section">
         <div class="container">
             <h2>Our Courses</h2>
             <h4> Our wide range of courses is tailored to help you thrive in the digital age. From foundational skills to advance programs, each course is designed by industry expert to provide you with knowledge and hands-on experience needed to excel in your chosen field.</h4>
         </div>
-    </section>
+    </section>-->
 
     <!-- Courses Section -->
     <section id="courses" class="courses-section">
         <div class="container">
           <!-- <div class="course-grid"> -->
-                <div class="course-item">
-                    <h3>Data Analysis and Business Intelligence</h3>
-                    <p>Become a data-driven decision maker with our comrehensive data analysis course. Learn to interpret complex data sets, draw meanigful insights and apply them to real-world scenarios.</p>
-                    <a href="data-analysis.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>Web Development</h3>
-                    <p>Build the future with our Web Development course. Learn to create dynamic, responsive websites using the latest technologies and best practices.</p>
-                    <a href="Web Dev.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>Python Programming</h3>
-                    <p>Develop proficiency in Python, one of the most versatile and in-demand programming languages.</p>
-                    <a href="python.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>AI for Business</h3>
-                    <p>Leverage artificial intelligence to drive business innovation and efficiency.</p>
-                    <a href="ai.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-                <div class="course-item">
-                    <h3>UI and UX Design</h3>
-                    <p>Design intuitive and engaging user interfaces that enhance user experience.</p>
-                    <a href="ui & ux.html" class="btn-secondary">Learn More</a>
-                </div>
-
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/dabi.jpg" alt="Data Analysis and Business Intelligence">
+                    </div>
+                    <div class="course-content">
+                        <h3>Data Analysis and Business Intelligence</h3>
+                        <p>Become a data-driven decision maker with our comprehensive data analysis course. Learn to interpret complex 
+                        data sets, draw meaningful insights, and apply them to real-world scenarios.</p>
+                        <a href="/courses-overview/dabi.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/webdev.jpg" alt="Web Development">
+                    </div>
+                    <div class="course-content">
+                        <h3>Web Development</h3>
+                        <p>Build the future with our Web Development course. Learn to create dynamic, responsive websites using the latest technologies and best practices.</p>
+                        <a href="/courses-overview/webdev.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/python.jpg" alt="Python Programming">
+                    </div>
+                    <div class="course-content">
+                        <h3>Python Programming</h3>
+                        <p>Master the fundamentals of Python programming. From basics to advanced concepts, this course is your gateway to versatile coding skills.</p>
+                        <a href="/courses-overview/python.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/ai.jpg" alt="AI for Business">
+                    </div>
+                    <div class="course-content">
+                        <h3>AI for Business</h3>
+                        <p>Discover how to harness AI for daily business operations. Learn to implement AI-driven strategies that optimize productivity and growth.</p>
+                        <a href="/courses-overview/ai.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/computer.jpg" alt="Intro to Computer & Technology">
+                    </div>
+                    <div class="course-content">
+                        <h3>Intro to Computer & Technology</h3>
+                        <p>Begin your journey into the world of computers and technology. Learn foundational concepts and skills essential for today’s digital age.</p>
+                        <a href="/courses-overview/ictech.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/mba.jpg" alt="MBA Essentials">
+                    </div>
+                    <div class="course-content">
+                        <h3>MBA Essentials</h3>
+                        <p>Develop critical business leadership skills. Learn the essentials of management, finance, and entrepreneurship to excel in your career.</p>
+                        <a href="/courses-overview/mba.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/algorithm-3859537_1280.jpg" alt="AI & Machine Learning">
+                    </div>
+                    <div class="course-content">
+                        <h3>AI & Machine Learning</h3>
+                        <p>Dive deep into the world of AI and machine learning. Learn to build intelligent systems that solve real-world problems.</p>
+                        <a href="/courses-overview/aiml.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/money.jpg" alt="Money Management">
+                    </div>
+                    <div class="course-content">
+                        <h3>Money Management</h3>
+                        <p>Master the art of managing money. Gain essential financial skills to budget, invest, and secure your financial future.</p>
+                        <a href="/courses-overview/money.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/history.jpg" alt="World History">
+                    </div>
+                    <div class="course-content">
+                        <h3>World History</h3>
+                        <p>Explore key events and milestones in world history. Understand the past to better navigate the present and future.</p>
+                        <a href="/courses-overview/worldhistory.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/thinking.jpg" alt="Critical Thinking">
+                    </div>
+                    <div class="course-content">
+                        <h3>Critical Thinking</h3>
+                        <p>Sharpen your decision-making and problem-solving skills. Learn techniques to approach problems logically and creatively.</p>
+                        <a href="/courses-overview/criticalthinking.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/freelance-4523096_1280.jpg" alt="Freelance Fundamentals">
+                    </div>
+                    <div class="course-content">
+                        <h3>Freelance Fundamentals</h3>
+                        <p>Kickstart your freelance career. Learn the essential skills and strategies to succeed as a freelancer in today’s competitive market.</p>
+                        <a href="/courses-overview/freelancefundamentals.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/ms.jpg" alt="MS Office">
+                    </div>
+                    <div class="course-content">
+                        <h3>MS Office</h3>
+                        <p>Become proficient in Microsoft Office. Learn to use Word, Excel, PowerPoint, and other tools to boost your productivity.</p>
+                        <a href="/courses-overview/msoffice.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/editing-7320125_1280 (1).jpg" alt="Video Editing">
+                    </div>
+                    <div class="course-content">
+                        <h3>Video Editing</h3>
+                        <p>Bring stories to life with video editing. Learn industry-standard tools and techniques to create engaging videos.</p>
+                        <a href="/courses-overview/videditing.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/graphics.jpg" alt="Graphic Design">
+                    </div>
+                    <div class="course-content">
+                        <h3>Graphic Design</h3>
+                        <p>Unleash your creativity with graphic design. Master the tools and principles to design stunning visuals for digital and print media.</p>
+                        <a href="/courses-overview/graphics.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/creative.jpg" alt="Creative Writing">
+                    </div>
+                    <div class="course-content">
+                        <h3>Creative Writing</h3>
+                        <p>Ignite your imagination and writing skills. Learn the craft of storytelling and writing in various genres for different audiences</p>
+                        <a href="/courses-overview/graphics.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/technical.jpg" alt="Technical Writing">
+                    </div>
+                    <div class="course-content">
+                        <h3>Technical Writing</h3>
+                        <p>Develop essential technical writing skills. Learn to create clear, concise, and effective documentation for technical fields.</p>
+                        <a href="/courses-overview/technical.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/copywriting.jpg" alt="Copywriting">
+                    </div>
+                    <div class="course-content">
+                        <h3>Copywriting</h3>
+                        <p>Master the art of persuasive writing. Learn to craft compelling copy that captivates audiences and drives action.</p>
+                        <a href="/courses-overview/copy.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/consult.jpg" alt="Business Consultation">
+                    </div>
+                    <div class="course-content">
+                        <h3>Business Consultation</h3>
+                        <p>Become a data-driven decision maker with our comprehensive data analysis course. Learn to interpret complex 
+                        data sets, draw meaningful insights, and apply them to real-world scenarios.</p>
+                        <a href="/courses-overview/businessconsult.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/content.jpg" alt="Content Development">
+                    </div>
+                    <div class="course-content">
+                        <h3>Content Development</h3>
+                        <p>Create compelling content that resonates. Learn to develop engaging and informative content for various platforms.</p>
+                        <a href="/courses-overview/contentdev.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/digital-marketing.jpg" alt="Digital Marketing">
+                    </div>
+                    <div class="course-content">
+                        <h3>Digital Marketing</h3>
+                        <p>Master digital marketing strategies. Learn SEO, social media, and analytics to build and grow brands online.</p>
+                        <a href="/courses-overview/digitalmarketing.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>                                                                                                                                                                                        
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/project-management-2738521_1280.jpg" alt="Project Management">
+                    </div>
+                    <div class="course-content">
+                        <h3>Project Management</h3>
+                        <p>Lead teams to success with effective project management skills. Learn to plan, execute, and deliver projects on time and within scope.</p>
+                        <a href="/courses-overview/projectmanagement.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/solar.jpg" alt="Sustainable Development & Green Technologies">
+                    </div>
+                    <div class="course-content">
+                        <h3>Sustainable Development & Green Technologies</h3>
+                        <p>Embrace sustainability with green technologies. Learn how to implement environmentally friendly solutions for a better future.</p>
+                        <a href="/courses-overview/sustainable.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/cyber-4610993_1280.jpg" alt="Cybersecurity">
+                    </div>
+                    <div class="course-content">
+                        <h3>Cybersecurity</h3>
+                        <p>Protect the digital world with cybersecurity skills. Learn to identify threats and secure systems from cyber-attacks.</p>
+                        <a href="/courses-overview/cybersecurity.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/ux.jpg" alt="UI & UX Design">
+                    </div>
+                    <div class="course-content">
+                        <h3>UI & UX Design</h3>
+                        <p>Design intuitive user experiences and interfaces. Learn the principles of creating user-friendly, engaging digital products.</p>
+                        <a href="/courses-overview/uiux.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="course-item">
+                <section class="course-container">
+                    <div class="course-image">
+                        <img src="/Assets/Images/gov.jpg" alt="Corporate Governance">
+                    </div>
+                    <div class="course-content">
+                        <h3>Corporate Governance</h3>
+                        <p>Understand corporate structures and governance. Learn how companies are directed and controlled for success and compliance.</p>
+                        <a href="/courses-overview/corporategov.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </section>
             </div>
         </div>
     </section>

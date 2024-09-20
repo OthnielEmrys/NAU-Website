@@ -1,137 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>New Age University - A New Way of Learning, Empowering the Future</title>
-  
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css\bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/heroes/">
+    <link rel="canonical" href="js\bootstrap.min.js">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script defer="defer" src="/bundle.js"></script>
     
-    <!-- Custom CSS -->
-    <link href="css\styles.css" rel="stylesheet"> <!-- Ensure this path is correct for your custom styles -->
-   
+    <style>
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            background: url('/Assets/Images/Hero1.jpg') no-repeat center center;
+             background-size: cover;
+            background-color: #000; /* Fallback color */
+            overflow: hidden;
+        }
+        /*.hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(221, 220, 220, 0.01), rgba(0, 0, 0, 0.05));  Dark overlay 
+            z-index: 0;
+        }*/
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            padding: 0 1rem;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+        .hero-content h4 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-content a {
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            background-color: #007bff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: bold;
+        }
+        .hero-content a:hover {
+            background-color: #0056b3;
+        }
+        .card-img-top{
+            max-height: 200px;
+        }
+    </style>
 </head>
+
 <body>
     <div id="header"></div>
-
-    <!-- Hero Section -->
     <section class="hero-section">
+        <div class="hero-overlay"></div> <!-- Overlay to darken the background -->
         <div class="hero-content">
-            <h1>Welcome to NAU</h1>
-            <h4>Discover a world of opportunities and start your journey with us today.</h4>
+        <strong><h1>Welcome to NAU</h1></strong>
+            <h4><strong>Discover a world of opportunities and start your journey with us today.</strong></h4>
             <a href="#learn-more">Learn More</a>
         </div>
     </section>
-<!-- Hero Section -->
+
     <section id="home" class="about-section py-5">
         <div class="container">
-            <p>Welcome to New Age University, where innovation meets education. We are committed to providing you with the tools, knowledge, and support you need to succeed in an ever-evolving global landscape. Whether you're here to build new skills, advance your career, or explore new opportunities, you've come to the right place.</p>
+            <p>Welcome to New Age University, where innovation meets education. We are committed to providing you with
+                the tools, knowledge, and support you need to succeed in an ever-evolving global landscape. Whether
+                you're here to build new skills, advance your career, or explore new opportunities, you've come to the
+                right place.</p>
             <p>Join our cutting-edge courses designed for the next generation of leaders and innovators.</p>
             <a href="#courses" class="btn btn-secondary">Explore Courses</a>
         </div>
     </section>
 
-    <!-- About Section -->
+        </div>
+    </section>
     <section id="about" class="about-section py-5">
         <div class="container">
             <h2>About NAU</h2>
             <h3>Who We Are</h3>
-            <p>At New Age University (NAU), we believe in the power of education to transform lives. Founded on the principles of accessibility, innovation, and excellence, our mission is to empower learners across the globe to achieve their fullest potential. Our carefully curated courses are designed to meet the needs of today's dynamic world, combining theoretical knowledge with practical application.</p>
-            <a href="about.html" class="btn btn-secondary">Learn More</a>
+            <p>At New Age University (NAU), we believe in the power of education to transform lives. Founded on the
+                principles of accessibility, innovation, and excellence, our mission is to empower learners across the
+                globe to achieve their fullest potential. Our carefully curated courses are designed to meet the needs
+                of today's dynamic world, combining theoretical knowledge with practical application.</p><a
+                href="/about.html" class="btn btn-secondary">Learn More</a>
         </div>
     </section>
-
-    <!-- Courses Section -->
     <section id="courses" class="courses-section py-5">
         <div class="container">
             <h2>Our Courses</h2>
-            <p>Our wide range of courses is tailored to help you thrive in the digital age. From foundational skills to advanced programs, each course is designed by industry experts to provide you with the knowledge and hands-on experience needed to excel in your chosen field.</p>
+            <p>Our wide range of courses is tailored to help you thrive in the digital age. From foundational skills to
+                advanced programs, each course is designed by industry experts to provide you with the knowledge and
+                hands-on experience needed to excel in your chosen field.</p>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
-                    <div class="card">
-                        <img src="Assets/Images/course1.jpg" class="card-img-top" alt="Data Analysis">
+                    <div class="card"><img src="/Assets/Images/dabi.jpg" class="card-img-top" alt="Data Analysis">
                         <div class="card-body">
                             <h3 class="card-title">Data Analysis and BI</h3>
-                            <p class="card-text">Become a data-driven decision maker with our comprehensive Data Analysis & Business Intelligence course.</p>
-                            <a href="data-analysis.html" class="btn btn-secondary">Learn More</a>
+                            <p class="card-text">Become a data-driven decision maker with our comprehensive Data
+                                Analysis & Business Intelligence course.</p><a href="/courses-overview/dabi.html"
+                                class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="Assets/Images/course2.jpg" class="card-img-top" alt="Web Development">
+                    <div class="card"><img src="Assets/Images/webdev.jpg" class="card-img-top" alt="Web Development">
                         <div class="card-body">
                             <h3 class="card-title">Web Development</h3>
-                            <p class="card-text">Build the future with our Web Development course. Learn to create dynamic, responsive websites using the latest technologies and best practices.</p>
-                            <a href="Web Dev.html" class="btn btn-secondary">Learn More</a>
+                            <p class="card-text">Build the future with our Web Development course. Learn to create
+                                dynamic, responsive websites using the latest technologies and best practices.</p><a
+                                href="/courses-overview/webdev.html" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="Assets/Images/course3.jpg" class="card-img-top" alt="Python Programming">
+                    <div class="card"><img src="Assets/Images/python.jpg" class="card-img-top"
+                            alt="Python Programming">
                         <div class="card-body">
                             <h3 class="card-title">Python Programming</h3>
-                            <p class="card-text">Become market ready by developing proficiency in Python, one of the most versatile and in-demand programming languages.</p>
-                            <a href="python.html" class="btn btn-secondary">Learn More</a>
+                            <p class="card-text">Master the fundamentals of Python programming. From basics to advanced concepts, this course is your gateway to versatile coding skills.</p>
+                            <a href="/courses-overview/python.html" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="Assets/Images/course4.jpg" class="card-img-top" alt="AI for Business">
+                    <div class="card"><img src="Assets/Images/ai.jpg" class="card-img-top" alt="AI for Business">
                         <div class="card-body">
                             <h3 class="card-title">AI for Business</h3>
-                            <p class="card-text">Leverage artificial intelligence to drive business innovation and efficiency.</p>
-                            <a href="ai.html" class="btn btn-secondary">Learn More</a>
+                            <p class="card-text">Discover how to harness AI for daily business operations. Learn to implement AI-driven strategies that optimize productivity and growth.</p>
+                            <a href="/courses-overview/ai.html" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="Assets/Images/course5.jpg" class="card-img-top" alt="UI and UX Design">
+                    <div class="card"><img src="/Assets/Images/ux.jpg" class="card-img-top" alt="UI and UX Design">
                         <div class="card-body">
                             <h3 class="card-title">UI and UX Design</h3>
-                            <p class="card-text">Design intuitive and engaging user interfaces that enhance user experience.</p>
-                            <a href="ui & ux.html" class="btn btn-secondary">Learn More</a>
+                            <p class="card-text">Design intuitive user experiences and interfaces. Learn the principles of creating user-friendly, engaging digital products.</p>
+                            <a href="/courses-overview/uiux.html" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card"><img src="/Assets/Images/ms.jpg" class="card-img-top" alt="UI and UX Design">
+                        <div class="card-body">
+                            <h3 class="card-title">Microsoft Office</h3>
+                            <p class="card-text">Become proficient in Microsoft Office. Learn to use Word, Excel, PowerPoint, and other tools to boost your productivity.</p>
+                            <a href="/courses-overview/uiux.html" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="Courses list.html" class="btn btn-secondary">Explore More Courses</a>
+            <div class="text-center mt-4"><a href="/Courses list.html" class="btn btn-secondary">Explore More Courses</a>
             </div>
         </div>
     </section>
-
-    <!-- Why Choose NAU -->
     <section id="why-choose" class="py-5 bg-light">
         <div class="container">
             <h2>Why New Age University?</h2>
-            <p>At NAU, we are more than just an educational platform; we are a community of learners, innovators, and leaders. Here’s why thousands have chosen to embark on their educational journey with us:</p>
+            <p>At NAU, we are more than just an educational platform; we are a community of learners, innovators, and
+                leaders. Here’s why thousands have chosen to embark on their educational journey with us:</p>
             <ul>
-                <li>Innovative Curriculum: Our courses are designed with the future in mind, ensuring you gain the skills needed to thrive in tomorrow's world.</li>
-                <li>Expert Instructors: Learn from industry leaders who bring hands-on experience and cutting-edge knowledge to the classroom.</li>
+                <li>Innovative Curriculum: Our courses are designed with the future in mind, ensuring you gain the
+                    skills needed to thrive in tomorrow's world.</li>
+                <li>Expert Instructors: Learn from industry leaders who bring hands-on experience and cutting-edge
+                    knowledge to the classroom.</li>
                 <li>Flexible Learning: Study at your own pace, on your own schedule, from anywhere in the world.</li>
-                <li>Career Support: We provide the tools and resources you need to translate your learning into meaningful career advancements.</li>
+                <li>Career Support: We provide the tools and resources you need to translate your learning into
+                    meaningful career advancements.</li>
             </ul>
             <h3>Testimonial:</h3>
             <blockquote class="blockquote">
-                <p class="mb-0">Joining NAU was the best decision I ever made for my career. The courses were engaging, the instructors fantastic, and the support I received was unparalleled.</p>
+                <p class="mb-0">Joining NAU was the best decision I ever made for my career. The courses were engaging,
+                    the instructors fantastic, and the support I received was unparalleled.</p>
                 <footer class="blockquote-footer">Othniel Emrys, NAU Graduate</footer>
             </blockquote>
             <blockquote class="blockquote">
-                <p class="mb-0">NAU made learning friendly with their flexible courses that can be completed at your pace, though usually within set timeframe, which breeds accountability.</p>
+                <p class="mb-0">NAU made learning friendly with their flexible courses that can be completed at your
+                    pace, though usually within set timeframe, which breeds accountability.</p>
                 <footer class="blockquote-footer">Ayomide Joshua, NAU Graduate</footer>
-            </blockquote>
-            <a href="community.html" class="btn btn-secondary">Join Our Community</a>
+            </blockquote><a href="https://chat.whatsapp.com/DTX3s23QgOP2XVOTZEJfOr" class="btn btn-secondary">Join Our Community</a>
         </div>
     </section>
-
-    <!-- How It Works -->
     <section id="how-it-works" class="py-5">
         <div class="container">
             <h2>Your Path to Success</h2>
@@ -139,76 +208,55 @@
             <ol>
                 <li>Browse Courses: Explore our catalog to find the course that best fits your goals.</li>
                 <li>Enroll: Sign up for your chosen course with just a few clicks.</li>
-                <li>Learn: Access course materials, participate in interactive sessions, and complete assessments at your own pace.</li>
+                <li>Learn: Access course materials, participate in interactive sessions, and complete assessments at
+                    your own pace.</li>
                 <li>Career Support: Apply what you've learned to advance your career or start a new one.</li>
-            </ol>
-            <a href="Courses-page.html" class="btn btn-secondary">Start Learning Now</a>                        
+            </ol><a href="/Courses list.html" class="btn btn-secondary">Start Learning Now</a>
         </div>
     </section>
-    
-    <!-- Apply Section -->
-        <section id="apply" class="apply-section my-5">
-            <div class="container">
-                <h2>Apply Now</h2>
-                <p>Ready to take the next step? Apply for our courses today and join a community of learners dedicated to growth and success.</p>
-                <a href="apply.html" class="btn btn-primary">Apply Today</a>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section my-5">
-            <div class="container">
-                <h2>We're Here to Help</h2>
-                <p>Have questions? Need assistance? Our team is here to support you every step of the way. Reach out to us for help with course selection/advice, enrollment, or any other inquiries you may have.</p>
-                <form action="submit_form.php" method="POST" class="contact-form">
-                    <div class="mb-3">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </section>
-      
-
-        <div id="footer"></div>
-
-        <script>
-            function loadHTML(selector, url) {
-                fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.querySelector(selector).innerHTML = data;
-                    });
-            }
-    
-            loadHTML('#header', 'components/header.html');
-            loadHTML('#footer', 'components/footer.html');
-        </script>
-        
-            <!-- Optional JavaScript -->
-            <!-- Bootstrap Bundle with Popper -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        
-            <!-- Custom Scripts -->
-            <script>
-                // Smooth scrolling for anchor links
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    });
+    <section id="apply" class="apply-section my-5">
+        <div class="container">
+            <h2>Apply Now</h2>
+            <p>Ready to take the next step? Apply for our courses today and join a community of learners dedicated to
+                growth and success.</p><a href="/apply.html" class="btn btn-primary">Apply Today</a>
+        </div>
+    </section>
+    <section id="contact" class="contact-section my-5">
+        <div class="container">
+            <h2>We're Here to Help</h2>
+            <p>Have questions? Need assistance? Our team is here to support you every step of the way. Reach out to us
+                for help with course selection/advice, enrollment, or any other inquiries you may have.</p>
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <div class="mb-3"><input name="name" class="form-control" placeholder="Your Name" required></div>
+                <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Your Email"
+                        required></div>
+                <div class="mb-3"><textarea name="message" class="form-control" placeholder="Your Message" rows="4"
+                        required></textarea></div><button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script>function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
                 });
-            </script>
-        </body>
-        </html>
-        
+        }
 
+        loadHTML('#header', '/components/header.html');
+        loadHTML('#footer', '/components/footer.html');</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bundle.js"></script>
+    <script>// Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });</script>
+</body>
 
+</html>

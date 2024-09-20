@@ -1,0 +1,92 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NAU</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="congratulations-message">
+        <div class="message-box">
+            <h2>Congratulations!</h2>
+            <p>We are pleased to inform you that you have been accepted into the course at New Age University.</p>
+            <p>You can now proceed to access your course materials and start your learning journey. Please log in to your account to get started.</p>
+            <a href="course-login.html" class="button">Access Your Course</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 New Age University. All rights reserved.</p>
+    </footer>
+
+
+<style id="dcoder_stylesheet">/* Success and Congratulations Pages Styles */
+
+.success-message, .congratulations-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    background: #f9f9f9; /* Light background for contrast */
+}
+
+.message-box {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.message-box h2 {
+    color: #333;
+}
+
+.message-box p {
+    color: #555;
+    margin-top: 10px;
+}
+
+.message-box .button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.message-box .button:hover {
+    background: #555;
+}
+</style><script id="dcoder_script">// script.js
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    
+    if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+        sidebar.style.width = '250px';
+        toggleBtn.innerHTML = '&#9664;'; // Left arrow
+    } else {
+        sidebar.style.width = '0';
+        toggleBtn.innerHTML = '&#9654;'; // Right arrow
+    }
+}
+</script></body></html>

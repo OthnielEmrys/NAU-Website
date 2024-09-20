@@ -1,0 +1,155 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="form-container">
+        <div class="form-box">
+            <h2>Application Form</h2>
+            <p>Please fill out the form below to apply for certification.</p>
+            <form action="submit-application.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required="">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required="">
+
+                <label for="qualification">Highest Qualification:</label>
+                <select id="course" name="course" required="">
+                    <option value="" disabled="" selected="">Choose below</option>
+                    <option value="high-school">Data Analysis and Business Intelligence</option>
+                    <option value="o-level">Web Development</option>
+                    <option value="diploma">Graphic Design</option>
+                    <option value="bachelors-degree">Business Fundamentals</option>
+                    <option value="coporate-governance">Coporate Governance</option>
+                    <!-- Add more courses as needed -->
+                </select>
+
+                <label for="course">Course Applied For:</label>
+                <select id="course" name="course" required="">
+                    <option value="" disabled="" selected="">Select a course</option>
+                    <option value="data-analysis">Data Analysis and Business Intelligence</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="ui-ux">User Interface & User Experience</option>
+                    <option value="python-programming">Python Programming</option>
+                    <option value="ict">Intro to Computer & Technology</option>
+                    <option value="mba">Masters in Business Administration</option>
+                    <option value="machine-learning">Machine Learning</option>
+                    <option value="money">Money</option>
+                    <option value="world-histroy">World Histroy</option>
+                    <option value="critical-thinking">Critical Thinking</option>
+                    <option value="microsoft-office">Microsoft Office</option>
+                    <option value="freelance-fundamentals">Freelance Fundamentals</option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="creative-writing">Creative Writing</option>
+                    <option value="technical-writing">Technical Writing</option>
+                    <option value="copy-writing">Copy Writing</option>
+                    <option value="business-fundamentals">Business Fundamentals</option>
+                    <option value="coporate-governance">Coporate Governance</option>
+                    <!-- Add more courses as needed -->
+                </select>
+
+                <textarea id="comments" name="Why This Course"></textarea>
+
+                <textarea id="comments" name="comments"></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                });
+        }
+
+        loadHTML('#header', 'components/header.html');
+        loadHTML('#footer', 'components/footer.html');
+    </script>
+
+    <script src="script.js"></script>
+
+
+<style id="dcoder_stylesheet">/* Application Form Page Styles */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.form-box {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-box h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-box input, .form-box select, .form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-box textarea {
+    height: 100px;
+}
+
+.form-box button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.form-box button:hover {
+    background: #555;
+}
+</style><script id="dcoder_script">// script.js
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    
+    if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+        sidebar.style.width = '250px';
+        toggleBtn.innerHTML = '&#9664;'; // Left arrow
+    } else {
+        sidebar.style.width = '0';
+        toggleBtn.innerHTML = '&#9654;'; // Right arrow
+    }
+}
+</script></body></html>

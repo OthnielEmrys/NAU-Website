@@ -38,7 +38,7 @@
 .hero-section {
     position: relative;
     height: 80vh;
-    background: url('Assets/Images/pexels-ivan-samkov-4624882.jpg') no-repeat center center;
+    background: url('/Assets/Images/Hero1.jpg') no-repeat center center; /* */
     background-size: cover;
     overflow: hidden;     
 }
@@ -48,10 +48,30 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Semi-dark overlay for better contrast*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); /* Semi-dark overlay for better contrast*/
     z-index: 0; /* Overlay is below the content */
 }
 .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #080808;
+    text-align: center;
+    padding: 0 1rem;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+.hero-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #080808;
+    text-align: center;
+    padding: 0 1rem;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+.hero-content1 p{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,13 +80,20 @@
     text-align: center;
     padding: 0 1rem;
     z-index: 1; /* Ensure content is above the overlay */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold; /* Bolder font */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Shadow for better readability */
+    background: rgba(216, 215, 215, 0); /* Background color behind text for added contrast */
+    display: inline; /* Ensures background color wraps text properly */
+    padding: 0.5rem;
 }
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: bold; /* Bolder font */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Shadow for better readability */
-    background: rgba(0, 0, 0, 0.0); /* Background color behind text for added contrast */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Shadow for better readability */
+    background: rgba(216, 215, 215, 0); /* Background color behind text for added contrast */
     display: inline; /* Ensures background color wraps text properly */
     padding: 0.5rem;
 }
@@ -75,7 +102,7 @@
     color: #161616;
     font-weight: bolder; /* Bolder font */
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0.5, 1.8); /* Shadow for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, .5, 1.8); /* Shadow for better readability */
     background: rgba(0, 0, 0, 0.8); /* Background color behind text for added contrast */
     display: inline; /* Ensures background color wraps text properly */
     padding: 0.5rem;
@@ -388,10 +415,10 @@
 }
         /* Custom styles for About Page */
         .about-hero {
-            background-image: url('Assets/Images/pexels-buro-millennial-636760-1438072.jpg'); /* Replace 'your-image-path.jpg' with the actual path to your background image */
+            background-image: url('/Assets/Images/courses-image2.jpg'); /* Replace 'your-image-path.jpg' with the actual path to your background image */
             background-size: cover;
             background-position: center;
-            height: 50vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -531,65 +558,7 @@
 .social-links a {
     margin-right: 10px;
 }
-.hero-section {
-    position: relative;
-    height: 80vh;
-    background: url('Assets/Images/pexels-ivan-samkov-4624882.jpg') no-repeat center center;
-    background-size: cover;
-    overflow: hidden;     
-}
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Semi-dark overlay for better contrast*/
-    z-index: 0; /* Overlay is below the content */
-}
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    padding: 0 1rem;
-    z-index: 1; /* Ensure content is above the overlay */
-}
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold; /* Bolder font */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Shadow for better readability */
-    background: rgba(0, 0, 0, 0.0); /* Background color behind text for added contrast */
-    display: inline; /* Ensures background color wraps text properly */
-    padding: 0.5rem;
-}
-.hero-content p {
-    font-size: 2rem;
-    color: #161616;
-    font-weight: bolder; /* Bolder font */
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0.5, 1.8); /* Shadow for better readability */
-    background: rgba(0, 0, 0, 0.8); /* Background color behind text for added contrast */
-    display: inline; /* Ensures background color wraps text properly */
-    padding: 0.5rem;
-}
-.hero-content a {
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
-    background-color: #007bff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
-}
-.hero-content a:hover {
-    background-color: #0056b3;
-}
+
 .footer-section {
     background-color: 180%,#0a0a0a, #17191b, #333435;
 }
@@ -710,55 +679,6 @@
     .main-nav a:hover {
         color: #f0f0f0;
     }
-    
-    /* Hero Section */
-    .hero-section {
-        background: url('Assets/Images/courses-image2.jpg') no-repeat center center;
-        color: #ffffff;
-        text-align: center;
-        position: relative;
-        height: 80vh;
-        background-size: cover;
-        overflow: hidden; 
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Shadow for better readability */
-        
-    }
-    .text{
-        font-size: 1.9rem;
-    }
-    .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Semi-dark overlay for better contrast*/
-            z-index: 0; /* Overlay is below the content */
-        }
-        .hero-content {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: bold; /* Bolder font */
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Shadow for better readability */
-            background: rgba(0, 0, 0, 0.0); /* Background color behind text for added contrast */
-            display: inline; /* Ensures background color wraps text properly */
-            padding: 0.5rem;
-            padding-top: 50px;
-        }
-        .hero-section-h1 {
-            padding-top: 70px;
-            font-size: 3.5rem;
-        }
-    .hero-section-h2 {
-        font-size: 1.9rem;
-        margin-bottom: 20px;
-    }
-    
-    .hero-section-p {
-        font-size: 1.7rem;
-        margin-bottom: 40px;
-    }
-    
     .btn-primary {
         background: #ffffff;
         color: #000000;

@@ -1,0 +1,33 @@
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Application Form</title><link rel="stylesheet" href="styles.css"><script defer="defer" src="apply.bundle.js"></script></head><body><div id="header"></div><style>.form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 80px;  /* Adjust based on header height */
+            padding-bottom: 60px; /* Adjust based on footer height */
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Ensure it is above other content */
+        }
+
+        iframe {
+            border: none;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header, .footer {
+    position: relative;
+    z-index: 2; /* Ensure header and footer are above the form */
+    }</style><body><div class="form-container"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNalou0xJ0TQ5Deh2GxKqXZ2WyNFLkdVbePQEI5GGleKqlQ/viewform?embedded=true" width="700" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></body></body></html><div id="footer"></div><script>function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                });
+        }
+
+        loadHTML('#header', '/src/components/header.html');
+        loadHTML('#footer', '/components/footer.html');</script><script src="script.js"></script>

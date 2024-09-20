@@ -1,0 +1,39 @@
+{
+  "id": "css-fundamentals-quiz",
+  "title": "CSS Fundamentals Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does CSS stand for?",
+      "options": [
+        "Creative Style Sheets",
+        "Cascading Style Sheets",
+        "Computer Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 2,
+      "question": "Which property is used to change the background color?",
+      "options": [
+        "color",
+        "bgcolor",
+        "background-color",
+        "background"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 3,
+      "question": "How do you select an element with id 'demo'?",
+      "options": [
+        ".demo",
+        "#demo",
+        "demo",
+        "*demo"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Age University - Empowering the Future</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .btn-secondary:hover, .btn-primary:hover {
+            opacity: 0.9;
+        }
+        .hero-section {
+            height: 80vh;
+            background: url('Assets/Images/pexels-ivan-samkov-4624882.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .hero-content p {
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 0.5rem;
+        }
+        .btn-primary, .btn-secondary {
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+        }
+        .footer-section {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem 0;
+        }
+        .footer-section h5, .footer-section p, .footer-section a {
+            color: #ddd;
+        }
+        .footer-bottom {
+            background-color: #222;
+            text-align: center;
+            padding: 1rem;
+            color: #ccc;
+        }
+        .social-links a {
+            margin: 0 0.5rem;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="Assets/Images/NAU (2).png" alt="NAU Logo" class="d-inline-block align-text-top" style="height: 70px;">
+                    <span style="font-size: 25px;">New Age University</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apply.html">Apply</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to NAU</h1>
+            <p>Discover a world of opportunities and start your journey with us today.</p>
+            <a href="#learn-more" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2>About NAU</h2>
+            <p>At New Age University, we believe in the power of education to transform lives. Our mission is to empower learners across the globe to achieve their fullest potential, with courses designed to meet the needs of today’s dynamic world.</p>
+            <a href="about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <p>Explore a wide range of courses designed for the digital age. Each course is crafted by industry experts to equip you with the skills and knowledge needed to excel in your field.</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Example of a course card -->
+                <div class="col">
+                    <div class="card">
+                        <img src="Assets/Images/course1.jpg" class="card-img-top" alt="Data Analysis">
+                        <div class="card-body">
+                            <h3 class="card-title">Data Analysis and BI</h3>
+                            <p class="card-text">Become a data-driven decision maker with our Data Analysis & Business Intelligence course.</p>
+                            <a href="data-analysis.html" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More cards here... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h5>About Us</h5>
+                <p>New Age University is a global institution committed to innovative education, preparing students for a rapidly evolving world.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Contact Us</h5>
+                <p>Email: info@nau.com</p>
+                <p>Phone: +123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 New Age University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

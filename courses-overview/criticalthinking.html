@@ -1,0 +1,82 @@
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAU - Critical Thinking</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="canonical" href="js\bootstrap.min.js">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script defer="defer" src="/bundle.js"></script>
+    <link rel="stylesheet" href="/css/course.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <section class="course-hero">
+        <div class="overlay">
+            <h1>Critical Thinking</h1>
+        </div>
+    </section>
+    
+    <section class="course-details">
+        <div class="container">
+            <h2>Course Overview</h2>
+            <p>
+                The Critical Thinking course at New Age University is designed to enhance students' analytical and reasoning skills. This course focuses on developing the ability to analyze arguments, identify logical fallacies, and make reasoned decisions. Participants will learn techniques to evaluate information critically and construct well-supported arguments. This course is essential for students and professionals looking to improve their problem-solving skills and make informed decisions in various aspects of life.
+            </p>
+    
+            <h2>Key Details</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Duration:</strong> 6 weeks</li>
+                <li class="list-group-item"><strong>Level:</strong> Beginner to Intermediate</li>
+                <li class="list-group-item"><strong>Format:</strong> Online, Self-paced</li>
+                <li class="list-group-item"><strong>Start Date:</strong> January 10, 2025</li>
+                <li class="list-group-item"><strong>Cost:</strong> Free</li>
+            </ul>
+    
+            <h2>Curriculum</h2>
+            <p>The curriculum for this course includes the following modules:</p>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Week 1:</strong> Introduction to Critical Thinking - Fundamentals of critical thinking and its importance.</li>
+                <li class="list-group-item"><strong>Week 2:</strong> Analyzing Arguments - Techniques for evaluating arguments and evidence.</li>
+                <li class="list-group-item"><strong>Week 3:</strong> Logical Fallacies - Common logical fallacies and how to avoid them.</li>
+                <li class="list-group-item"><strong>Week 4:</strong> Constructing Arguments - Strategies for building strong, well-reasoned arguments.</li>
+                <li class="list-group-item"><strong>Week 5:</strong> Critical Thinking in Practice - Applying critical thinking skills to real-world problems.</li>
+                <li class="list-group-item"><strong>Week 6:</strong> Review and Final Assessment - Recap of key concepts and final project to demonstrate learned skills.</li>
+            </ul>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+        <div class="apply-button">
+            <a href="/apply.html" class="btn btn-dark">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+<script>function loadHTML(selector, url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(selector).innerHTML = data;
+        });
+}
+
+loadHTML('#header', '/components/header.html');
+loadHTML('#footer', '/components/footer.html');</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="bundle.js"></script>
+<script>// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});</script>

@@ -1,0 +1,39 @@
+{
+  "id": "functions-quiz",
+  "title": "Python Functions Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What keyword is used to return a value from a function?",
+      "options": [
+        "give",
+        "return",
+        "yield",
+        "send"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 2,
+      "question": "How do you call a function named 'my_function'?",
+      "options": [
+        "call my_function()",
+        "my_function",
+        "my_function()",
+        "run my_function"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is the correct way to define a function with a parameter?",
+      "options": [
+        "def my_function(param1):",
+        "function my_function(param1):",
+        "def my_function[param1]:",
+        "func my_function(param1):"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

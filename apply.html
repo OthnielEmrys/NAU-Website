@@ -3,10 +3,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Standard Favicon for Browsers -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+<!-- For Apple devices (iOS, macOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- For Android devices and PWA -->
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+
+<!-- Optional SVG for Scalable Icons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+ 
 </head>
 <body>
     <div id="header"></div>
     <style>
+/* Container for form */
+#form-container {
+    padding: 20px;
+    margin-top: 80px; /* Adjust margin to ensure space from header */
+    margin-bottom: 80px; /* Adjust margin to ensure space from footer */
+}
+
+/* Ensure form is responsive */
+iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #form-container {
+        margin-top: 60px;  /* Adjust as needed for smaller screens */
+        margin-bottom: 60px;
+    }
+}
+
         .form-container {
             display: flex;
             justify-content: center;
@@ -29,12 +65,13 @@
 
         .header, .footer {
     position: relative;
-    z-index: 2; /* Ensure header and footer are above the form */
+    z-index: 10; /* Ensure header and footer are above the form */
     }
     </style>
 </head>
 <body>
     <div class="form-container">
+        <!-- Google Form embed -->
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNalou0xJ0TQ5Deh2GxKqXZ2WyNFLkdVbePQEI5GGleKqlQ/viewform?embedded=true" width="700" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 </body>
@@ -43,17 +80,34 @@
     <div id="footer"></div>
 
     <script>
-        function loadHTML(selector, url) {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load header and footer HTML
+            loadHTML('components/header.html', '#header');
+            loadHTML('components/footer.html', '#footer');
+            
+            // Load the Google Form
+            loadForm();
+        });
+    
+        function loadHTML(url, selector) {
             fetch(url)
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector(selector).innerHTML = data;
-                });
+                })
+                .catch(error => console.error('Error loading HTML:', error));
         }
-
-        loadHTML('#header', 'components/header.html');
-        loadHTML('#footer', 'components/footer.html');
+    
+        function loadForm() {
+            const formContainer = document.createElement('div');
+            formContainer.id = 'form-container';
+            formContainer.innerHTML = `
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNalou0xJ0TQ5Deh2GxKqXZ2WyNFLkdVbePQEI5GGleKqlQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            `;
+            document.querySelector('#main-content').appendChild(formContainer);
+        }
     </script>
+    
 
     <script src="script.js"></script>
 

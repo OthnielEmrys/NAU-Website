@@ -1,0 +1,82 @@
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAU - MBA Essentials</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="canonical" href="js\bootstrap.min.js">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script defer="defer" src="/bundle.js"></script>
+    <link rel="stylesheet" href="/css/course.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <section class="course-hero">
+        <div class="overlay">
+            <h1>MBA Essentials</h1>
+        </div>
+    </section>
+    
+    <section class="course-details">
+        <div class="container">
+            <h2>Course Overview</h2>
+            <p>
+                The MBA Essentials course at New Age University is designed for professionals and aspiring business leaders who seek to master the core principles of business management. This course covers key areas such as leadership, strategic management, financial accounting, marketing, and operations management. Whether you're preparing for an advanced role in your organization or starting your own business, this course provides the essential knowledge to succeed in today’s competitive business environment.
+            </p>
+    
+            <h2>Key Details</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Duration:</strong> 10 weeks</li>
+                <li class="list-group-item"><strong>Level:</strong> Intermediate</li>
+                <li class="list-group-item"><strong>Format:</strong> Online, Self-paced</li>
+                <li class="list-group-item"><strong>Start Date:</strong> October 15, 2024</li>
+                <li class="list-group-item"><strong>Cost:</strong> Free</li>
+            </ul>
+    
+            <h2>Curriculum</h2>
+            <p>The curriculum for this course includes the following modules:</p>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Week 1:</strong> Leadership & Management - Understanding key leadership principles and management styles.</li>
+                <li class="list-group-item"><strong>Week 2:</strong> Strategic Management - Learn how to develop and execute business strategies for growth and competitiveness.</li>
+                <li class="list-group-item"><strong>Week 3:</strong> Financial Accounting - Gain insights into financial statements, accounting principles, and budgeting.</li>
+                <li class="list-group-item"><strong>Week 4:</strong> Marketing Management - Explore marketing strategies, consumer behavior, and brand management.</li>
+                <li class="list-group-item"><strong>Week 5:</strong> Operations Management - Understanding the processes behind efficient production and service delivery.</li>
+                <li class="list-group-item"><strong>Week 6:</strong> Business Analytics - Using data to drive decision-making and optimize business performance.</li>
+                <li class="list-group-item"><strong>Week 7:</strong> Entrepreneurship & Innovation - Explore how to launch, grow, and innovate in a business environment.</li>
+                <li class="list-group-item"><strong>Week 8:</strong> Human Resource Management - Learn about managing people, talent development, and organizational culture.</li>
+                <li class="list-group-item"><strong>Week 9:</strong> Corporate Finance - Analyze investment decisions, capital structure, and risk management.</li>
+                <li class="list-group-item"><strong>Week 10:</strong> Business Ethics & Sustainability - Explore ethical decision-making and sustainable business practices.</li>
+            </ul>   
+        <div class="apply-button">
+            <a href="/apply.html" class="btn btn-dark">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+<script>function loadHTML(selector, url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(selector).innerHTML = data;
+        });
+}
+
+loadHTML('#header', '/components/header.html');
+loadHTML('#footer', '/components/footer.html');</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="bundle.js"></script>
+<script>// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});</script>
