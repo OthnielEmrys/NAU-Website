@@ -18,7 +18,7 @@
         .hero-section {
             position: relative;
             height: 80vh;
-            background: url('/Assets/Images/Hero1.jpg') no-repeat center center;
+            background: url('./Assets/Images/Hero1.jpg') no-repeat center center;
              background-size: cover;
             background-color: #000; /* Fallback color */
             overflow: hidden;
@@ -128,7 +128,7 @@
                             <h3 class="card-title">Web Development</h3>
                             <p class="card-text">Build the future with our Web Development course. Learn to create
                                 dynamic, responsive websites using the latest technologies and best practices.</p><a
-                                href="/courses-overview/webdev.html" class="btn btn-secondary">Learn More</a>
+                                href="./courses-overview/webdev.html" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -244,8 +244,8 @@
                 });
         }
 
-        loadHTML('#header', '/components/header.html');
-        loadHTML('#footer', '/components/footer.html');</script>
+        loadHTML('#header', './components/header.html');
+        loadHTML('#footer', 'components/footer.html');</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="bundle.js"></script>
     <script>// Smooth scrolling for anchor links
