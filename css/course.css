@@ -1,16 +1,5 @@
 /* Course Overview Page Styles */
 
-.course-hero {
-    background-image: url('https://via.placeholder.com/1920x500'); /* Sample image URL */
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
 .course-hero .overlay {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
