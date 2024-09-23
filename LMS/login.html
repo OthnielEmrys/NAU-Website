@@ -67,18 +67,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">NAU</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+ <div id="header"></div>
 
     <main class="login-page">
         <div class="login-box">
@@ -96,10 +85,17 @@
         </div>
     </main>
 
-    <footer>
-        <p>© 2024 New Age University. All rights reserved.</p>
-    </footer>
+    <div id="footer"></div>
+    <script>function loadHTML(selector, url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector(selector).innerHTML = data;
+            });
+    }
 
+    loadHTML('#header', '../components/header.html');
+    loadHTML('#footer', '../components/footer.html');</script>
     <script src="js/auth.js"></script>
     <script>
         document.getElementById('login-form').addEventListener('submit', function(e) {
